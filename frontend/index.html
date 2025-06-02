@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Tailor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tailor Your Resume with AI</h1>
+        <p class="subtitle">Paste the Job Description and upload your resume (PDF or DOCX). The AI will tailor it for you!</p>
+
+        <form id="tailorForm">
+            <div class="form-group">
+                <label for="jobDescription">Job Description:</label>
+                <textarea id="jobDescription" name="job_description" rows="12" required placeholder="Paste the full job description here..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="resumeFile">Upload Resume (PDF or DOCX):</label>
+                <input type="file" id="resumeFile" name="resume" accept=".pdf,.docx" required>
+                <small id="fileInfoDisplay" class="file-info-display"></small>
+            </div>
+
+            <button type="submit" id="submitBtn">
+                <span class="btn-text">Tailor My Resume</span>
+                <span class="btn-loader" style="display:none;"></span> <!-- Spinner for button -->
+            </button>
+        </form>
+
+        <div id="statusArea" class="status-area" style="display:none;">
+            {/* Status messages like "Processing..." or "Success!" will appear here */}
+        </div>
+
+        <div id="errorArea" class="error-message" style="display:none;">
+            {/* Error messages will appear here */}
+        </div>
+
+        <div id="resultArea" class="result-area">
+            {/* Download link will appear here */}
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- Make sure this matches your JS filename -->
+</body>
+</html>
